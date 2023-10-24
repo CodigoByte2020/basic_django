@@ -1,0 +1,27 @@
+<!-- Template base que será heredada por los demás templates -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <title>DJANGO PROJECT</title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="{% url 'index' %}">INDEX</a></li>  <!-- URL: PATH NAME -->
+        <li><a href="{% url 'about' %}">ABOUT</a></li>
+        <li><a href="{% url 'tareas' %}">TASK</a></li>
+        <li><a href="{% url 'create_task' %}">CREATE TASK</a></li>
+    </ul>
+</nav>
+</body>
+</html>
+
+<!-- La plantilla que herede de está, debe insertar su código entre estas 2 etiquetas -->
+{% block content %}
+{% endblock %}

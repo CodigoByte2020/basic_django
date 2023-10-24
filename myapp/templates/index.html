@@ -1,4 +1,7 @@
 <!doctype html>
+{% extends 'layouts/base.html' %}
+
+{% block content %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,5 +18,8 @@
     debitis deleniti dolor dolorem dolores eaque, earum eius eligendi et eum, exercitationem hic, in modi molestias
     nam non nostrum optio quasi quibusdam quidem quo quos reiciendis saepe similique suscipit tempora tempore
     tenetur voluptatum? Nam, voluptatibus.</p>
+{% load static %}
+<img src="{% static 'python_django.png' %}" alt="" width="200px">
 </body>
 </html>
+{% endblock %}
